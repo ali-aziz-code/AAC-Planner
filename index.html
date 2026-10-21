@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="A student-owned planning space for the Leaving Certificate CASD Action Project.">
+  <title>AAC Project Planner | LC CASD</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#workspace">Skip to planner</a>
+<header class="topbar">
+  <a class="brand" href="./" aria-label="AAC Project Planner home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M7 21C7 10 14 6 22 6c0 9-5 15-15 15Z" stroke="currentColor" stroke-width="1.7"/><path d="m5 24 13-13" stroke="currentColor" stroke-width="1.7"/></svg></span><span>AAC <b>Project Planner</b></span></a>
+  <span class="course">Leaving Certificate <span>·</span> CASD</span>
+</header>
+<main>
+  <section class="intro" aria-labelledby="page-title">
+    <div><div class="intro-label"><span class="dot"></span> A space for your next idea</div><h1 id="page-title">Turn your idea<br>into <em>meaningful action.</em></h1><p>Think it through. Make a plan. Keep it yours.</p></div>
+    <div class="intro-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-leaf"><svg viewBox="0 0 100 100" fill="none"><path d="M29 74C23 39 47 22 78 22c1 31-16 56-49 52Z" stroke="currentColor" stroke-width="2"/><path d="M20 84 61 43m-22 21-2-18m14 6 15 1" stroke="currentColor" stroke-width="2"/></svg></div><span class="art-note">Your idea.<br>Your impact.</span><span class="spark spark-one">✳</span><span class="spark spark-two">+</span></div>
+  </section>
+  <div class="workspace" id="workspace">
+    <div class="planner-column">
+      <nav class="steps" aria-label="Planner stages">
+        <button type="button" class="step active" data-step="focus" aria-current="step"><span class="step-number">1</span><span>Find your focus</span></button>
+        <button type="button" class="step" data-step="action"><span class="step-number">2</span><span>Plan your action</span></button>
+        <button type="button" class="step" data-step="review"><span class="step-number">3</span><span>Review & export</span></button>
+      </nav>
+      <form id="planner" autocomplete="off">
+        <section id="focus-panel" class="panel" aria-labelledby="focus-title">
+          <div class="panel-top"><div><div class="eyebrow">THE STARTING POINT</div><h2 id="focus-title" tabindex="-1">Find your focus</h2></div><span class="stage-count">01 / 03</span></div>
+          <p class="section-intro">Start with a specific issue you want to explore. Rough notes are welcome.</p>
+          <div class="field-grid">
+            <div class="field"><label for="sector">Sector / area</label><p id="sector-hint" class="hint">Use your class sector or describe your area.</p><input id="sector" name="sector" maxlength="200" list="sector-suggestions" placeholder="Choose or type your own" aria-describedby="sector-hint"><datalist id="sector-suggestions"><option value="Energy"><option value="Transport"><option value="Food"><option value="Waste and consumption"><option value="Biodiversity"><option value="Water"><option value="Buildings"></datalist></div>
+            <div class="field"><label for="brief">SEC brief topic</label><p id="brief-hint" class="hint">Use the brief provided by your teacher.</p><input id="brief" name="brief" maxlength="500" placeholder="The topic in your current brief" aria-describedby="brief-hint"></div>
+          </div>
+          <div class="field"><label for="idea">My project idea</label><p id="idea-hint" class="hint">Which specific issue matters to you, and why?</p><textarea id="idea" name="idea" rows="3" maxlength="4000" placeholder="The issue I want to address is…" aria-describedby="idea-hint"></textarea></div>
+          <div class="field"><label for="alignment">Connection to the brief</label><p id="alignment-hint" class="hint">How does this issue fit its topic and requirements?</p><textarea id="alignment" name="alignment" rows="2" maxlength="3000" placeholder="My idea connects to the brief because…" aria-describedby="alignment-hint"></textarea></div>
+          <div class="field"><label for="research">Research to inform my plan</label><p id="research-hint" class="hint">What do reliable sources and an action by others suggest? Record source details.</p><textarea id="research" name="research" rows="3" maxlength="5000" placeholder="What I know, what I need to find out, and sources to check…" aria-describedby="research-hint"></textarea></div>
+          <div class="panel-actions"><span class="small-note">Your words, at your pace.</span><button class="button primary" type="button" data-go="action">Plan my action <span aria-hidden="true">→</span></button></div>
+        </section>
+        <section id="action-panel" class="panel" aria-labelledby="action-title" hidden>
+          <div class="panel-top"><div><div class="eyebrow">FROM THINKING TO DOING</div><h2 id="action-title" tabindex="-1">Plan your action</h2></div><span class="stage-count">02 / 03</span></div>
+          <p class="section-intro">Describe what you intend to do. You can return and refine these notes.</p>
+          <div class="field"><label for="action">My intended action & objective</label><p id="action-hint" class="hint">What will you do, and what change will it work towards?</p><textarea id="action" name="action" rows="3" maxlength="4000" placeholder="I intend to… The change I am working towards is…" aria-describedby="action-hint"></textarea></div>
+          <div class="field-grid">
+            <div class="field"><label for="stakeholders">Stakeholders & audience</label><p id="stakeholders-hint" class="hint">Who is affected or involved? Use roles, not personal details.</p><textarea id="stakeholders" name="stakeholders" rows="3" maxlength="3000" placeholder="People or groups, and how I will involve them…" aria-describedby="stakeholders-hint"></textarea></div>
+            <div class="field"><label for="role">My own contribution</label><p id="role-hint" class="hint">If working with others, which work will be yours?</p><textarea id="role" name="role" rows="3" maxlength="3000" placeholder="I will be responsible for…" aria-describedby="role-hint"></textarea></div>
+          </div>
+          <div class="field"><label for="evidence">Evidence & impact</label><p id="evidence-hint" class="hint">What will you record during the action? How will it help you judge impact?</p><textarea id="evidence" name="evidence" rows="3" maxlength="4000" placeholder="The evidence I will gather, how, and what it could show…" aria-describedby="evidence-hint"></textarea></div>
+          <div class="field"><label for="next">Next steps & timing</label><p id="next-hint" class="hint">Set out tasks, responsibilities and realistic dates.</p><textarea id="next" name="next" rows="3" maxlength="4000" placeholder="What needs to happen next, who will do it, and by when…" aria-describedby="next-hint"></textarea></div>
+          <details class="extra-notes"><summary>Practicalities & reflection <span>2 useful prompts</span></summary><div class="detail-content">
+            <div class="field"><label for="practical">Resources & permissions</label><p id="practical-hint" class="hint">What support, resources or permissions should you discuss with your teacher?</p><textarea id="practical" name="practical" rows="3" maxlength="3000" placeholder="Resources, access, safety, consent or data protection to check…" aria-describedby="practical-hint"></textarea></div>
+            <div class="field"><label for="reflection">A reflection to return to</label><p id="reflection-hint" class="hint">What assumptions, changes or limitations might you revisit?</p><textarea id="reflection" name="reflection" rows="2" maxlength="3000" placeholder="Something I want to think about as my project develops…" aria-describedby="reflection-hint"></textarea></div>
+          </div></details>
+          <div class="panel-actions"><button class="button text-button" type="button" data-go="focus">← Back to focus</button><button class="button primary" type="button" data-go="review">Review my plan <span aria-hidden="true">→</span></button></div>
+        </section>
+      </form>
+      <section id="review-panel" class="panel review-panel" aria-labelledby="review-title" hidden>
+        <div class="panel-top"><div><div class="eyebrow">YOUR THINKING, TOGETHER</div><h2 id="review-title" tabindex="-1">Your project summary</h2></div><span class="stage-count">03 / 03</span></div>
+        <p class="section-intro">Read it through, then keep a copy for your next teacher check-in.</p>
+        <div class="review-check" id="review-check"><h3 id="review-status"></h3><p>These checks show where you have notes. They do not assess quality or confirm AAC compliance.</p><ul id="review-gaps"></ul></div>
+        <div class="summary-document"><div class="document-top"><span class="document-label">LC CASD · ACTION PROJECT</span><span class="draft-label">Planning draft</span></div><h3 id="summary-heading">My action project plan</h3><div id="summary-content"></div></div>
+        <div class="export-actions"><button type="button" id="copy-summary" class="button primary"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>Copy summary</button><button type="button" id="download-summary" class="button secondary">Download .txt <span aria-hidden="true">↓</span></button></div>
+        <p id="export-status" class="export-status" role="status" aria-live="polite"></p>
+        <div id="manual-copy" hidden><label for="copy-text">Copy your summary from here</label><textarea id="copy-text" readonly rows="8"></textarea></div>
+        <div class="review-footnote">This is a planning aid, not the SEC Action Project Journal. Follow the current brief and SEC submission instructions. Nothing is submitted to your teacher.</div>
+        <div class="panel-actions"><button class="button text-button" type="button" data-go="action">← Keep editing</button><button type="button" class="button text-button" id="clear-plan">Clear this draft</button></div>
+      </section>
+    </div>
+    <aside class="sidebar" aria-label="Planning guidance">
+      <div class="guidance-card"><span class="guidance-icon" aria-hidden="true">↗</span><div class="eyebrow">A LITTLE DIRECTION</div><h2 id="guidance-title">Keep the brief in view.</h2><p id="guidance-text">Your sector is a starting point. Your issue and action need to connect to the SEC brief.</p><div class="card-rule"></div><p class="question" id="guidance-question">What makes this issue worth acting on?</p><a class="source-link" href="https://www.curriculumonline.ie/getmedia/73252104-823e-4a8f-9650-af1144adf110/AAC_Guidelines_LC-CASD_Final.pdf" target="_blank" rel="noopener noreferrer">Read the official AAC Guidelines <span aria-hidden="true">↗</span></a></div>
+      <div class="draft-card"><div class="draft-heading"><span class="dot"></span><b>This draft</b><span id="notes-count">0 / 12</span></div><div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div><p>Planning areas with notes.<br>Your teacher can help you refine them.</p></div>
+      <div class="privacy-note"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><div><b>Your draft stays in this tab.</b><p>No app account or automatic saving. Copy or download before closing or refreshing. Avoid personal or sensitive details.</p></div></div>
+    </aside>
+  </div>
+  <footer><div><b>Room to think. Space to act.</b><span>LC Climate Action & Sustainable Development</span></div><p>Prompts informed by the <a href="https://www.curriculumonline.ie/getmedia/73252104-823e-4a8f-9650-af1144adf110/AAC_Guidelines_LC-CASD_Final.pdf" target="_blank" rel="noopener noreferrer">AAC Guidelines, November 2024</a> (pp. 4–9).<br>Use alongside your current SEC brief. This planner does not generate project answers.</p></footer>
+</main>
+<dialog id="clear-dialog" aria-labelledby="clear-title"><h2 id="clear-title">Clear this draft?</h2><p>This removes all notes from this tab. Download or copy them first if you want to keep them.</p><div class="dialog-actions"><button class="button secondary" id="cancel-clear" type="button" autofocus>Keep my draft</button><button class="button danger" id="confirm-clear" type="button">Clear all notes</button></div></dialog>
+</body>
+</html>
